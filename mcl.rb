@@ -5,20 +5,20 @@
 class Mcl < Formula
   desc "mcl is interactive CLI"
   homepage ""
-  version "0.0.6"
+  version "0.0.8"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/masuldev/mcl/releases/download/v0.0.6/mcl_0.0.6_Darwin_arm64.tar.gz"
-      sha256 "b1b664d135ddc5e688934b028e23747ee3a725b6acea63f7a1265c963c9675c0"
+      url "https://github.com/masuldev/mcl/releases/download/v0.0.8/mcl_0.0.8_Darwin_arm64.tar.gz"
+      sha256 "5284d3d34e1ffe1de16dc2c5f366baca3a09eb9d9c5562342f820744c7edb693"
 
       def install
         bin.install "mcl"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/masuldev/mcl/releases/download/v0.0.6/mcl_0.0.6_Darwin_x86_64.tar.gz"
-      sha256 "3cceaea44642206eed036ecbb291a7b7156e4d4f4b04e91f1a25bd05c413f927"
+      url "https://github.com/masuldev/mcl/releases/download/v0.0.8/mcl_0.0.8_Darwin_x86_64.tar.gz"
+      sha256 "c3cfb485175f50bcf22eb791820b7fc0142bc8b8d5dacb812a1dd88721056f4a"
 
       def install
         bin.install "mcl"
@@ -28,16 +28,16 @@ class Mcl < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/masuldev/mcl/releases/download/v0.0.6/mcl_0.0.6_Linux_arm64.tar.gz"
-      sha256 "7283f6f407224d1bc698890e95c4d080dd2c9a8f657a1c90522289d8fd3abdb2"
+      url "https://github.com/masuldev/mcl/releases/download/v0.0.8/mcl_0.0.8_Linux_arm64.tar.gz"
+      sha256 "2ff48a2784161b174817bc45efad3002a2ca7f49e0b74c700bf64aadd1db82c2"
 
       def install
         bin.install "mcl"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/masuldev/mcl/releases/download/v0.0.6/mcl_0.0.6_Linux_x86_64.tar.gz"
-      sha256 "3f7f233c77efd8c5628137fc06c922c030f2fb52d361f6dadc99628409d34962"
+      url "https://github.com/masuldev/mcl/releases/download/v0.0.8/mcl_0.0.8_Linux_x86_64.tar.gz"
+      sha256 "960d72753fe829ca5b90444b90a6b0f87b4c6a88c78b84c92b11aa508f20e1af"
 
       def install
         bin.install "mcl"

@@ -5,20 +5,20 @@
 class Mcl < Formula
   desc "mcl is interactive CLI"
   homepage ""
-  version "0.0.9"
+  version "1.0.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/masuldev/mcl/releases/download/v0.0.9/mcl_0.0.9_Darwin_arm64.tar.gz"
-      sha256 "5b09839500bd28d3092e3097c61b17681b321e022e335072054e6950c8cabfd6"
+    on_intel do
+      url "https://github.com/masuldev/mcl/releases/download/v1.0.0/mcl_1.0.0_darwin_amd64.tar.gz"
+      sha256 "312e95aa4d48e24bf812220e11381abc7e00d669727455eae378e7ac1554f6f6"
 
       def install
         bin.install "mcl"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/masuldev/mcl/releases/download/v0.0.9/mcl_0.0.9_Darwin_x86_64.tar.gz"
-      sha256 "9bc2776559ec0954980f097b791bba6a8eddf67b0602c9d059839c16e324292f"
+    on_arm do
+      url "https://github.com/masuldev/mcl/releases/download/v1.0.0/mcl_1.0.0_darwin_arm64.tar.gz"
+      sha256 "02023cc99da4ffa334605506fec07a840078283c7d6aa45d799b293c1b5d5207"
 
       def install
         bin.install "mcl"
@@ -27,20 +27,24 @@ class Mcl < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/masuldev/mcl/releases/download/v0.0.9/mcl_0.0.9_Linux_arm64.tar.gz"
-      sha256 "62c79f0837ab0d19df54e44019885e7ea55511065594cbe9d040873a7094dfdd"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/masuldev/mcl/releases/download/v1.0.0/mcl_1.0.0_linux_amd64.tar.gz"
+        sha256 "f9825fcc22d7114461c2ce7598928b67222431c5a3b869d4fae4bcb745b3eef5"
 
-      def install
-        bin.install "mcl"
+        def install
+          bin.install "mcl"
+        end
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/masuldev/mcl/releases/download/v0.0.9/mcl_0.0.9_Linux_x86_64.tar.gz"
-      sha256 "9791872c9a4ed96423774c1d5df7b60255b06068fd41b492e15821a93707aff8"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/masuldev/mcl/releases/download/v1.0.0/mcl_1.0.0_linux_arm64.tar.gz"
+        sha256 "246cc1c2f2be2d4b5141867f1dae90387445c14b5be0cfbbdd5c4e7fc9740636"
 
-      def install
-        bin.install "mcl"
+        def install
+          bin.install "mcl"
+        end
       end
     end
   end

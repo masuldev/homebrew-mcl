@@ -5,20 +5,20 @@
 class Mcl < Formula
   desc "mcl is interactive CLI"
   homepage ""
-  version "1.1.0"
+  version "1.1.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/masuldev/mcl/releases/download/v1.1.0/mcl_1.1.0_darwin_amd64.tar.gz"
-      sha256 "2d3ca370fa803c043cca33de9bf1c4c6a29a006f0d6f4341dbc8ebaa03d89f55"
+      url "https://github.com/masuldev/mcl/releases/download/v1.1.1/mcl_1.1.1_darwin_amd64.tar.gz"
+      sha256 "b75271df6321d6946bb78402c2a30324eff3920c7c55e903d32327110ec1ab78"
 
       def install
         bin.install "mcl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/masuldev/mcl/releases/download/v1.1.0/mcl_1.1.0_darwin_arm64.tar.gz"
-      sha256 "9a49da791a413fc676e3a90e25f8c85c51755ca6cebb37ff3eb6a65af8e0d97b"
+      url "https://github.com/masuldev/mcl/releases/download/v1.1.1/mcl_1.1.1_darwin_arm64.tar.gz"
+      sha256 "71ffcb8660b001472954c46ef90b2a1b8d1b981ce8a9d4a46d149ba4c6b61bb6"
 
       def install
         bin.install "mcl"
@@ -29,8 +29,8 @@ class Mcl < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/masuldev/mcl/releases/download/v1.1.0/mcl_1.1.0_linux_amd64.tar.gz"
-        sha256 "8050633a5055f5c38686fc7b5fae6d4951bf871c2639933fb684bf7cf5f533c1"
+        url "https://github.com/masuldev/mcl/releases/download/v1.1.1/mcl_1.1.1_linux_amd64.tar.gz"
+        sha256 "ab83f8a8688ed31ee1f7b230fe610879698534eccc9e9c8332c854f36db5734a"
 
         def install
           bin.install "mcl"
@@ -39,8 +39,8 @@ class Mcl < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/masuldev/mcl/releases/download/v1.1.0/mcl_1.1.0_linux_arm64.tar.gz"
-        sha256 "63b214d83690e9da96f40131c8724629b543d4777a089a7e0706a1f7da82b8ee"
+        url "https://github.com/masuldev/mcl/releases/download/v1.1.1/mcl_1.1.1_linux_arm64.tar.gz"
+        sha256 "e2f692217d2d484a975bd0aa162b09111c452f6fd9ae7577865a6b86fbd70d45"
 
         def install
           bin.install "mcl"

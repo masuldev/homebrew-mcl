@@ -5,20 +5,20 @@
 class Mcl < Formula
   desc "mcl is interactive CLI"
   homepage ""
-  version "1.0.2"
+  version "1.1.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/masuldev/mcl/releases/download/v1.0.2/mcl_1.0.2_darwin_amd64.tar.gz"
-      sha256 "6b80ddfe2f2d22c5d34b278c164e557e65221fd22bbca08ce8b621a922b98d8b"
+      url "https://github.com/masuldev/mcl/releases/download/v1.1.0/mcl_1.1.0_darwin_amd64.tar.gz"
+      sha256 "2d3ca370fa803c043cca33de9bf1c4c6a29a006f0d6f4341dbc8ebaa03d89f55"
 
       def install
         bin.install "mcl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/masuldev/mcl/releases/download/v1.0.2/mcl_1.0.2_darwin_arm64.tar.gz"
-      sha256 "ff6c3e87a34a324f80cf75825b07b34f7c1137cc7e675efacb781982f3162c0e"
+      url "https://github.com/masuldev/mcl/releases/download/v1.1.0/mcl_1.1.0_darwin_arm64.tar.gz"
+      sha256 "9a49da791a413fc676e3a90e25f8c85c51755ca6cebb37ff3eb6a65af8e0d97b"
 
       def install
         bin.install "mcl"
@@ -29,8 +29,8 @@ class Mcl < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/masuldev/mcl/releases/download/v1.0.2/mcl_1.0.2_linux_amd64.tar.gz"
-        sha256 "60bfbad84c271733f9840a3d8463697ef080500df7a7a185f8de8c1fe809371c"
+        url "https://github.com/masuldev/mcl/releases/download/v1.1.0/mcl_1.1.0_linux_amd64.tar.gz"
+        sha256 "8050633a5055f5c38686fc7b5fae6d4951bf871c2639933fb684bf7cf5f533c1"
 
         def install
           bin.install "mcl"
@@ -39,8 +39,8 @@ class Mcl < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/masuldev/mcl/releases/download/v1.0.2/mcl_1.0.2_linux_arm64.tar.gz"
-        sha256 "1a22aba8b635db542b9276ba6d27edb22111bd3eb6f8972f48225c21f1898ac8"
+        url "https://github.com/masuldev/mcl/releases/download/v1.1.0/mcl_1.1.0_linux_arm64.tar.gz"
+        sha256 "63b214d83690e9da96f40131c8724629b543d4777a089a7e0706a1f7da82b8ee"
 
         def install
           bin.install "mcl"
